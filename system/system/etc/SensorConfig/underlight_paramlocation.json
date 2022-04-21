@@ -1,0 +1,9 @@
+{
+    "paramlocation": {
+        "sensordisplaylocation": [619,34,658,74],
+        "notsupportDCFeature": 0,
+        "supportAcl3": 1,
+        "supportSecondLight": 0,
+        "supportSecondDisplay": 0
+    }
+}

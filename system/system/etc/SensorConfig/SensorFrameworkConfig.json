@@ -1,0 +1,16 @@
+{
+ "EngineModeRejectReduceSar": 1,
+ "SupportLuxAngle": 1,
+ "is_underproximitysensor": 1,
+ "SmartProx": 1,
+ "MinimumBrightHighThreshold": 400,
+ "UnderLightSupportHardwareBrightnessDelta": 1,
+ "UnderDisplayLight": 1,
+ "MaxBrightness": 2047,
+ "MultilevelBright": 1,
+ "ScreenOnWaitLux": 300,
+ "NotifyLcmBrightnessToDriverList": 1,
+ "BoostBrightness": 573,
+ "IgnoreAlsRawData": 1,
+ "UseGsm": {"channelLow": -1,"channelHigh": -1}
+}
