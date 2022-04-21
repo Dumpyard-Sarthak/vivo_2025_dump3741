@@ -1,0 +1,8 @@
+on property:vendor.vivo.nfc.boot=1
+    enable secureelement-hal_1_2
+
+service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
+    class hal
+    disabled
+    user system
+    group system

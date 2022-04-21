@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rawDenoiserConfig>
+  <noiseProfile>
+      <a0>0.0001964153</a0>
+      <a1>0.0041835225</a1>
+      <b0>0.0000001336</b0>
+      <b1>-0.0000508105</b1>
+  </noiseProfile>
+  <TotalLevNum>11</TotalLevNum>
+  <segmentEnable>0</segmentEnable>
+  <maxValidFrameBlendEnable>1</maxValidFrameBlendEnable>
+  <recoverOverExposure>0</recoverOverExposure>
+  <scaleHigFreq description="high freq denoise strength, higer value stronger noise reduction.">1.0</scaleHigFreq>
+  <scaleMidFreq description="mid freq denoise strength, higer value stronger noise reduction.">1.0</scaleMidFreq>
+  <scaleLowFreq description="low freq denoise strength, higer value stronger noise reduction.">1.0</scaleLowFreq>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">50</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">0.6</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is less than the certain amount of the reference frame will not be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.0</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">100</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">200</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">400</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">600</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">800</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">1600</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">2400</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">4</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">3200</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">6</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+      <motionFilterStrength>1.1</motionFilterStrength>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">4000</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">8</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 80</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+      <motionFilterStrength>1.2</motionFilterStrength>
+  </levConfigData>
+  <levConfigData>
+      <rawISO description="rawISO = shortGain * 50.">6400</rawISO>
+      <filterStrength description="denoise strength, which scales the noise profile lut.">1.0</filterStrength>
+      <sharpnessThr description="if the frame whose sharpness is greater than the certain amount of the reference frame will be used for multi-frame denoise.">0.965</sharpnessThr>
+      <maxNotUsedFrame description="specifies the maximum frames which will not be used when their frame sharpness are not satisfied.">8</maxNotUsedFrame>
+      <blendRatio description="blending factor between original pixel and denoised pixel. Lower value = softer image, Higher value = more noisy image.">1.0</blendRatio>
+      <segmentFusionRatio description="Q6, blending factor between original pixel and denoised pixel">64 32 64 64 64 64 64</segmentFusionRatio>
+      <grainAdderRatio description="controls the amount of grain added to the image. Lower value = less grain, Higher value = more grain.">0</grainAdderRatio>
+      <darkControl description="controls the denoise strength of the dark region. Lower value = weak noise reduction, Higher value = stronger noise reduction.">1.0</darkControl>
+      <higFreqSimilarityThr description="high freq similarity threshold, higer value stronger noise reduction.">1.6</higFreqSimilarityThr>
+      <midFreqSimilarityThr description="mid freq similarity threshold, higer value stronger noise reduction.">1.0</midFreqSimilarityThr>
+      <lowFreqSimilarityThr description="low freq similarity threshold, higer value stronger noise reduction.">1.0</lowFreqSimilarityThr>
+      <motionFilterStrength>1.3</motionFilterStrength><!--1.3-->
+      <motionBlendRatio>1.0</motionBlendRatio><!--0.8-->
+      <higFreqAdjFactor>1.0</higFreqAdjFactor>
+      <lowFreqAdjFactor>1.0</lowFreqAdjFactor>
+  </levConfigData>
+</rawDenoiserConfig>

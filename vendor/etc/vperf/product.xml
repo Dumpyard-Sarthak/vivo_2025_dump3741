@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BoostConfigs>
+    <protocol product="PD1824test">
+        <data commonid="0x00001081"  type ="1" hintid="150"  timeout="2000" />
+        <data commonid="0x00001082"  type ="2" hintid="150" timeout="2000"  />
+    </protocol>
+
+    <protocol product="PD1829test">
+        <data commonid="0x00001083"  type ="1" hintid="150"  timeout="2000" />
+        <data commonid="0x00001084"  type ="2" hintid="150" timeout="2000"  />
+    </protocol>
+
+    <protocol product="TD1909test">
+        <data commonid="0x00001083"  type ="1" hintid="150"  timeout="2345" />
+        <data commonid="0x00001084"  type ="2" hintid="150" timeout="6789"  />
+    </protocol>
+</BoostConfigs>
+

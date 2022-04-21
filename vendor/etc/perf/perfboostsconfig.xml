@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+*/
+-->
+
+
+<!--Ids are used in identifying the boosts, increment ids linearly,
+    do not modify Ids, or add in between-->
+<!--follow the number format rules while specifying number, can be given
+    in any format-->
+
+<BoostConfigs>
+    <PerfBoost>
+
+    <!--app lauch boost-->
+        <!-- SCHED DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED UPMIGRATE resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+
+        <!-- Type="1", main launch boost of 2sec -->
+       <Config
+           Id="0x00001081" Type="1" Enable="true" Timeout="2000"
+           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+           0x40800100, 0xFFF, 0x41000100, 6" />
+
+    <!--app lauch boost (disabling packing)-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <!-- STORAGE CLK SCALING resource opcode, value-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- LLCCBW resource opcode, value-->
+        <!-- L3 resource opcode, value-->
+        <!-- GPU nap resource opcode, value-->
+
+        <!-- Type="2", launch boost for disable packing 1.5sec -->
+       <Config
+           Id="0x00001081" Type="2" Enable="true" Timeout="1500"
+           Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59,
+                      0x41828000, 806, 0x43400000, 1190, 0x4281C000, 1500" />
+
+
+    <!-- config_enableLaunchBoostv3-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- LPM Bias resource opcode, value-->
+
+        <!-- Type="3", FA launch boost of 15sec -->
+       <Config
+           Id="0x00001081" Type="3" Enable="true" Timeout="15000"
+           Resources="0x40C00000, 0x3, 0x40C58000, 95, 0x40C54000, 100, 0x40408000, 0x63" />
+
+     <!-- config_gameBoost-->
+         <!-- SCHEDBOOST resource opcode, value-->
+         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+         <!-- LPM Bias resource opcode, value-->
+
+         <!-- Type="4", FA launch boost of 15sec -->
+        <Config
+            Id="0x00001081" Type="4" Enable="true" Timeout="15000"
+            Resources="0x40C00000, 0x3, 0x40C58000, 95, 0x40C54000, 100, 0x40408000, 0x63" />
+
+     <!-- config_enableLaunchBoost6-->
+        <!-- LPM_BIAS resource opcode, val ms-->
+        <!-- SLB_BIG, val, SLB_BIG, val-->
+        <!-- MIN_FREQ_BIG, val MHz -->
+        <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
+
+        <!-- Type="6", Game Launch boost -->
+        <Config
+            Id="0x00001081" Type="6" Enable="true" Timeout="2000"
+            Resources="0x40408000, 0x5,
+                       0x40C68000, 60, 0x40C68010, 60,
+                       0x40800000, 1363,
+                       0x41448000, 20000 "/>
+
+    <!--app launch boost (attach application) -->
+        <!-- SCHED_TASK_BOOST resource opcode, value-->
+        <Config
+            Id="0x00001081" Type="103" Enable="true" Timeout="2000"
+            Resources="0x40C80000, 0x0" />
+
+
+    <!--Animation boost -->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+       <Config
+            Id="0x00001083" Enable="true" Timeout="400"
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+       <Config
+           Id="0x00001083" Type="1" Enable="true"
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                      0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+       <Config
+           Id="0x00001083" Type="2" Enable="true" Timeout="400"
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                      0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+       <Config
+           Id="0x00001083" Type="3" Enable="true" Timeout="200"
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                      0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+
+    <!--  resume boost add by vivo -->
+       <Config
+            Id="0x00001083" Type="4" Enable="true" Timeout="400"
+           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40C20200, 0x28, 0x40C1C200, 0x32,
+                      0x40800000, 1478, 0x40800100, 1363,
+                      0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59,
+                      0x41828000, 806, 0x43400000, 1190, 0x4281C000, 1500, 0x41000100, 6" />
+
+    <!--Animation boost -->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+	   <Config
+           Id="0x00001083" Type="5" Enable="true"
+           Resources="0x40804100, 0xFFF, 0x40800100, 0x433" />
+
+    <!--  activity boost for same task -->
+       <Config
+            Id="0x00001083" Type="6" Enable="true" Timeout="400"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF, 0x40800100, 0xFFF , 0x41000100, 6" />
+
+    <!--Activity boost-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+
+        <!-- Type="1", activity boost for different tasks of 600ms -->
+        <Config
+            Id="0x00001084" Type="1" Enable="true" Timeout="600"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100,0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
+
+        <!-- Type="2", activity boost for same task of 400ms -->
+        <Config
+            Id="0x00001084" Type="2" Enable="true" Timeout="400"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100,0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
+        <!-- Type="3", activity boost for same task of 300ms -->
+        <Config
+            Id="0x00001084" Type="3" Enable="true" Timeout="300"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100,0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
+
+    <!--Touch boost-->
+
+        <!-- Type="1", home key touch boost of 100ms -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="1" Enable="true" Timeout="100"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+
+        <!-- Type="2", launcher2 boost of 30ms -->
+        <Config
+            Id="0x00001085" Type="2" Enable="true" Timeout="30"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+
+        <!-- Type="3", tencent touch boost of 150ms -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="3" Enable="true" Timeout="150"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF, 0x40400000, 0x1" />
+
+        <!-- Type="4", tencent back key boost of 400ms-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="4" Enable="true" Timeout="400"
+            Resources="0x40C00000, 0x2, 0x40800000, 0x626" />
+
+        <!-- Type="5", mobileqq qzone scroll boost of 1000ms-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="5" Enable="true" Timeout="1000"
+            Resources="0x40800100, 0x386" />
+
+        <!-- Type="6", netease.newsreader boost when move very slowly. After up event, perfRelease-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="6" Enable="true" Timeout="4000"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF" />
+
+        <!-- Type="7", netease.newsreader boost of 50ms one time when move very fast-->
+        <Config
+            Id="0x00001085" Type="7" Enable="true" Timeout="50"
+            Resources="0x40C00000, 0x2" />
+
+        <!-- Type="8", tencent touch boost of 200ms -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="8" Enable="true" Timeout="300"
+            Resources="0x40C00000, 0x2, 0x40800000, 0xFFF, 0x40400000, 0x1" />
+
+        <!-- Type=9", wechat  open red packet  touch boost of 500 -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="9" Enable="true" Timeout="500"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40400000, 0x1" />
+
+    <!--FBE boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="10" Enable="true" Timeout="1500"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                       0x40800000, 0xCCC, 0x40800100, 0xCCC, 0x40400000, 0x1" />
+
+      <!-- Type=11", SGameActivity    touch boost of 100 -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <Config
+            Id="0x00001085" Type="11" Enable="true" Timeout="100"
+            Resources="0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                       0x40800000, 0xCCC, 0x40800100, 0xCCC, 0x40400000, 0x1" />
+    <!--Vertical Scroll boost-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+
+        <!-- Type="1", Vertical Scroll boost -->
+        <Config
+            Id="0x00001080" Type="1" Enable="true"
+            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+
+    <!--Horizontal Scroll boost-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+
+        <!-- Type="2", Horizontal Scroll boost -->
+        <Config
+            Id="0x00001080" Type="2" Enable="true"
+            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+
+
+    <!--Pre-Fling boost-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+
+        <!-- Type="4", Pre-Fling boost -->
+        <Config
+            Id="0x00001080" Type="4" Enable="true" Timeout="80"
+            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+
+    <!--MTP boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- STORAGE CLK SCALING resource opcode, value-->
+        <!-- LPM Bias resource opcode, value -->
+
+        <!-- Type="", MTP boost -->
+        <Config
+            Id="0x00001086" Enable="true"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1516,
+                       0x40800100, 1516, 0x42C10000, 0x1,  0x40408000, 0x19" />
+
+    <!--PackageInstall boost-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- SCHED_SYNC_HINT_ENABLE resource opcode, value-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- Type="", Package Install boost -->
+        <Config
+            Id="0x00001088" Enable="true"
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF, 0x40CA0000, 0, 0x40C00000, 2" />
+
+    <!--Rotation latency boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- Type="", Rotation latency boost -->
+        <Config
+            Id="0x00001089" Enable="true" Timeout="1500"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000,0xFFF,
+                       0x40800100,0xFFF" />
+
+    <!--Rotation animation boost-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- GPU MIN_FREQUENCY resource opcode,value-->
+        <!-- Type="", Rotation animation boost -->
+        <Config
+            Id="0x00001090" Enable="true" Timeout="1000"
+            Resources="0x40800100, 1000, 0x42804000, 0" />
+
+    <!--Drag boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+
+         <!-- Type="1", Drag boost -->
+         <Config
+             Id="0x00001087" Type="1" Enable="true" Timeout="0"
+             Resources="0x40800000, 1017, 0x40800100, 1248" />
+
+    <!--Display on Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001041" Enable="true" Timeout="0"
+                 />
+
+    <!--Display off Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001040" Enable="true" Timeout="0"
+                 />
+
+    </PerfBoost>
+</BoostConfigs>
